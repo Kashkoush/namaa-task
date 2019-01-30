@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.sass']
+  styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
   loading = false;
@@ -16,11 +16,11 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     let id = this.router.url.slice(9);
-    console.log(id);
+    // console.log(id);
     this.userService.details(id).subscribe(data => {
       // console.log(data);
       this.user = JSON.parse(data._body);
-      console.log(this.user);
+      // console.log(this.user);
       this.loading = false;
     })
   }

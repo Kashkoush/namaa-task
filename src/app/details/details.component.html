@@ -1,3 +1,29 @@
-<p>
-  details works!
-</p>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['']">Namaa Task</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<div class="container">
+  <div class="row" *ngIf="user">
+    <div class="col-4">
+      <img src={{user.avatar_url}}>
+      <hr>
+      <h3>{{user.name}}</h3>
+      <h5>{{user.type}}</h5>
+    </div>
+    <div class="col-8">
+      <h1>User Details</h1>
+      <h4>Followers</h4>
+      <button mat-mini-fab color="primary">{{user.followers}}</button>
+      <h4>Following</h4>
+      <button mat-mini-fab color="primary">{{user.following}}</button>
+      <h4>Location</h4>
+      <h5>{{user.location}}</h5>
+      <h4>User since</h4>
+      <h6>{{user.updated_at}}</h6>
+    </div>
+  </div>
+</div>

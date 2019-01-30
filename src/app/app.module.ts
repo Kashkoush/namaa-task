@@ -15,6 +15,10 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {MatChipsModule} from '@angular/material/chips';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PlatformModule } from '@angular/cdk/platform';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     MatButtonModule, 
     MatCheckboxModule,
     MatInputModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    MatChipsModule,
+    BrowserModule,
+    ScrollingModule,
+    VirtualScrollerModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
